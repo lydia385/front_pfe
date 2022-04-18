@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        android:id="@+id/hder"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/bleufoncé">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/white"
+            android:padding="15dp"
+            android:text="Rendez-vous"></TextView>
+    </LinearLayout>
+    <com.skyhope.eventcalenderlibrary.CalenderEvent
+        android:id="@+id/calender_event"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/hder"
+        app:calender_background="@color/bleufoncé"
+        app:selected_day_text_color="@color/white"
+        app:selector_color="@color/bleu2"
+        app:current_month_day_color="@color/white"
+        app:month_color="@color/white"
+        app:week_name_color="@color/white"
+        app:next_icon="@drawable/rightarrow"
+        app:previous_icon="@drawable/leftarrow"
+        />
+    <LinearLayout
+        android:background="@drawable/itin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.51"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/bleufoncé"
+            android:paddingLeft="25dp"
+            android:text="Indiquer le lieu "></TextView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content"
+            android:hint="Adresse de vaccination">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_magny"
+                android:drawablePadding="10dp"
+                android:textColor="@color/bleufoncé">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+      <!--   <RelativeLayout
+                android:id="@+id/relLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_border"
+                android:elevation="10dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                app:layout_constraintWidth_percent="0.80"
+               >
+
+                <ImageView
+                    android:id="@+id/ic_magnify"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_magny"></ImageView>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ic_magnify"
+                    android:background="@null"
+                    android:hint="addresse vacination "
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/bleufoncé"
+                    android:textColorHint="@color/bleufoncé"
+                    android:textSize="15sp"></EditText>
+            </RelativeLayout>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/bleu2"
+            android:drawableLeft="@drawable/ic_gps"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Utiliser ma position"></TextView>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         android:layout_gravity="center"
+      android:padding="10dp"
+            android:layout_margin="10dp"
+            ></Spinner>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+        >
+
+          <Button
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintBaseline_toBottomOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:background="@drawable/bouton"
+              android:paddingHorizontal="25dp"
+              android:text="Comfirmer"
+              android:textColor="@color/white"
+              android:textSize="20dp"
+          ></Button>
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
